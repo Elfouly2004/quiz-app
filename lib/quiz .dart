@@ -145,7 +145,7 @@ int num=0;
               child: Container(
                 width:383 ,
                 height: 53,
-                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),color:(quiz == questions.Q2)?Color(0xffABD1C6):const Color(0xffffffff),),
+                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),color:(quiz == questions.Q1)?Color(0xffABD1C6):const Color(0xffffffff),),
                 child: RadioListTile<questions>(
                   value: questions.Q1,
                   groupValue: quiz,
@@ -172,7 +172,7 @@ int num=0;
               child: Container(
                 width:383 ,
                 height: 53,
-                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),color:(quiz == questions.Q3)?Color(0xffABD1C6):const Color(0xffffffff),),
+                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),color:(quiz == questions.Q2)?Color(0xffABD1C6):const Color(0xffffffff),),
 
                 child: RadioListTile<questions>(
                   value: questions.Q2,
@@ -199,7 +199,7 @@ int num=0;
               child: Container(
                 width:383 ,
                 height: 53,
-                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),color:(quiz == questions.Q1)?Color(0xffABD1C6):const Color(0xffffffff),),
+                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),color:(quiz == questions.Q3)?Color(0xffABD1C6):const Color(0xffffffff),),
 
                 child: RadioListTile<questions>(
                   value: questions.Q3,
