@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizapp/quiz%20.dart';
+import 'package:quizapp/view/quiz%20.dart';
 
 class login extends StatefulWidget {
   @override
@@ -57,8 +57,6 @@ class _loginState extends State<login> {
              keyboardType: TextInputType.name,
 
             ),
-
-
             ),
 
            SizedBox(height: MediaQuery.sizeOf(context).height*0.3,),

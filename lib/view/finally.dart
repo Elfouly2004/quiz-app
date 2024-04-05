@@ -51,26 +51,15 @@ backgroundColor: Color(0xff004643),
 
 
             Expanded(
-              child: Column(
-                children: [
-                  
-                  
-                  Container(
-                  width: double.infinity,
-                    height:605 ,
-                    // color: Colors.white,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.vertical(top: Radius.circular(150),)
-                    ),
-                  ),
-                  
-                  Container(),
-                  
-                  
-                  
-                  
-                ],
+              flex: 2,
+              child: Container(
+              width: double.infinity,
+                // height:605 ,
+                // color: Colors.white,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(150),)
+                ),
               ),
             ),
 

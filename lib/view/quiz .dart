@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
-import 'package:quizapp/finally.dart';
-import 'package:quizapp/login.dart';
+import 'package:quizapp/view/finally.dart';
+import 'package:quizapp/view/login.dart';
 class quiz extends StatefulWidget {
   @override
   State<quiz> createState() => _quizState();
