@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/finally.dart';
 import 'package:quizapp/login.dart';
 import 'package:quizapp/quiz%20.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       title: 'Flutter Demo',
-      home: quiz (),
+      home:  quiz (),
     );
   }
 }

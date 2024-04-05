@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
+import 'package:quizapp/finally.dart';
 import 'package:quizapp/login.dart';
 class quiz extends StatefulWidget {
   @override
@@ -8,7 +9,7 @@ class quiz extends StatefulWidget {
 }
 enum questions { Q1, Q2, Q3,Q4 }
 class _quizState extends State<quiz> {
-  int count1=59;
+  int count1=60;
   bool ans =true;
 CountDownController a7a=CountDownController();
   questions? quiz = questions.Q1;
@@ -81,7 +82,7 @@ int num=0;
                 child: Container(
                   // alignment: Alignment.topCenter,
                   height:200 ,
-                  width: 300,
+                  width: 350,
 
                   child: Center(
                       child: Text("${ques.keys.elementAt(count)}",
@@ -90,10 +91,11 @@ int num=0;
                   ),
 
                   decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.greenAccent,
+                        color: Colors.black45,
                         blurRadius: 30,
                         spreadRadius: 1,
                       )
@@ -104,7 +106,6 @@ int num=0;
               ),
             ),
 
-            SizedBox(height:  MediaQuery.sizeOf(context).height*0.01,),
 
 
          Center(
@@ -118,8 +119,17 @@ int num=0;
                controller: a7a,
 
                onComplete: (){
+                 if (ques.length-1==count) {
+                   Navigator.push(
+                       context,
+                       MaterialPageRoute(
+                           builder: (context){
+                             return finally1();
+                           }
+                       )
+                   );
 
-
+                 }
                  setState(() {
                    after();
                    a7a. restart();
@@ -132,7 +142,7 @@ int num=0;
           ],
         ),
 
-            SizedBox(height:  MediaQuery.sizeOf(context).height*0.1,),
+            SizedBox(height:  MediaQuery.sizeOf(context).height*0.09,),
 
 
             InkWell(
@@ -145,7 +155,10 @@ int num=0;
               child: Container(
                 width:383 ,
                 height: 53,
-                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),color:(quiz == questions.Q1)?Color(0xffABD1C6):const Color(0xffffffff),),
+                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),
+                  color:(quiz == questions.Q1)?Color(0xffABD1C6):const Color(0xffffffff),
+                  border: Border.all(color: Colors.black)
+                ),
                 child: RadioListTile<questions>(
                   value: questions.Q1,
                   groupValue: quiz,
@@ -160,6 +173,7 @@ int num=0;
               ),
             ),
 
+            SizedBox(height:  MediaQuery.sizeOf(context).height*0.01,),
 
 
             InkWell(
@@ -172,9 +186,14 @@ int num=0;
               child: Container(
                 width:383 ,
                 height: 53,
-                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),color:(quiz == questions.Q2)?Color(0xffABD1C6):const Color(0xffffffff),),
+                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),
+                  color:(quiz == questions.Q2)?Color(0xffABD1C6):const Color(0xffffffff),
+                    border: Border.all(color: Colors.black)
+
+                ),
 
                 child: RadioListTile<questions>(
+                  // fillColor:MaterialStatePropertyAll(Colors. deepOrange) ,
                   value: questions.Q2,
                   groupValue: quiz,
                   onChanged: (questions? value) {
@@ -182,11 +201,14 @@ int num=0;
                       quiz = value;
                     });
                   },
-                  title:  Text("${ques.values.elementAt(count)[1]}",style: TextStyle(color: Colors.black,fontSize: 20),),
+                  title:  Text("${ques.values.elementAt(count)[1]}",style: TextStyle(color: Colors.black,fontSize: 20),
+                  ),
 
                 ),
               ),
             ),
+
+            SizedBox(height:  MediaQuery.sizeOf(context).height*0.01,),
 
 
             InkWell(
@@ -199,7 +221,9 @@ int num=0;
               child: Container(
                 width:383 ,
                 height: 53,
-                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),color:(quiz == questions.Q3)?Color(0xffABD1C6):const Color(0xffffffff),),
+                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),
+                  color:(quiz == questions.Q3)?Color(0xffABD1C6):const Color(0xffffffff),                  border: Border.all(color: Colors.black)
+              ),
 
                 child: RadioListTile<questions>(
                   value: questions.Q3,
@@ -215,6 +239,9 @@ int num=0;
               ),
             ),
 
+            SizedBox(height:  MediaQuery.sizeOf(context).height*0.01,),
+
+
 
             InkWell(
               onTap: (){
@@ -225,7 +252,11 @@ int num=0;
               child: Container(
                 width:383 ,
                 height: 53,
-                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),color:(quiz == questions.Q4)?Color(0xffABD1C6):const Color(0xffffffff),),
+                decoration: BoxDecoration(borderRadius:  BorderRadius.circular(20),
+                  color:(quiz == questions.Q4)?Color(0xffABD1C6):const Color(0xffffffff),
+                    border: Border.all(color: Colors.black)
+
+                ),
 
                 child: RadioListTile<questions>(
                   value: questions.Q4,
@@ -248,10 +279,22 @@ int num=0;
 
             InkWell(
               onTap: (){
-               after();
+               if (ques.length-1==count) {
+                 Navigator.push(
+                     context,
+                     MaterialPageRoute(
+                         builder: (context){
+                           return finally1();
+                         }
+                     )
+                 );
+
+               }
                setState(() {
 
                });
+
+               after();
               },
               child: Container(
                 width: 383,
