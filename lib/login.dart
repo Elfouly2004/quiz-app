@@ -51,21 +51,11 @@ class _loginState extends State<login> {
              focusedBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: Colors.grey)
                 ),
-                hintText: "john Deh....",
+                hintText: "Your name.......",
                hintStyle: TextStyle(color: Colors.grey,fontSize: 13),
-                suffixIcon: IconButton(
-                 color: Colors.grey,
-                 onPressed: (){
-                  setState(() {
-                   pass_check=!pass_check;
-                 });
-                 },
-                  icon: pass_check? Icon(Icons.visibility_outlined)
-                   : Icon(Icons.visibility_off_outlined),
-             )
              ),
-             keyboardType: TextInputType.number,
-                obscureText: pass_check,
+             keyboardType: TextInputType.name,
+
             ),
             ),
 
