@@ -57,6 +57,8 @@ class _loginState extends State<login> {
              keyboardType: TextInputType.name,
 
             ),
+
+
             ),
 
            SizedBox(height: MediaQuery.sizeOf(context).height*0.3,),
